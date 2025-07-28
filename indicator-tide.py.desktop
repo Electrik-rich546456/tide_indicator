@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Tide Indicator
+Icon=indicator-tide.svg
+Exec=bash -c "python3 "$(dirname "$0")"/src/indicator-tide.py"
+Categories=Utility;
+X-GNOME-Autostart-enabled=true
+X-GNOME-Autostart-Delay=0

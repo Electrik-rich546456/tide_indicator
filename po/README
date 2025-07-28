@@ -1,0 +1,106 @@
+To prepare a source .py file(s) for translation
+===============================================
+
+Assume main project/file name is "MyProject".
+
+Ensure the first lines of code in the source (before imports) contains the header:
+
+	import gettext
+	gettext.install( "MyProject" )
+
+If there is more than one source file, omit the header above (the header must only appear once).
+
+Each end-user string must be changed from:
+
+	"This is static text without variables"
+
+to:
+
+	_( "This is static text without variables" )
+
+as per http://www.gnu.org/software/gettext/manual/gettext.html#Sources
+
+If a variable needs to be included in the text, use the format function:
+
+    _( "Your lucky number is {0}!" ).format( 7 )
+
+Create the file POTFILES.in containing a list of source files which require translation.
+
+Create the file LINGUAS and add each language/locale code, separated by whitespace, on a single line.
+
+
+Create the PO Template (POT) file
+=================================
+
+Run a terminal and create the PO template file:
+
+	xgettext --files-from=po/POTFILES.in --directory=src --output=po/MyProject.pot
+
+Open MyProject.pot in a text editor.
+Edit the first three lines in the comment header as appropriate.
+Set Project-Id-Version and Report-Msgid-Bugs-To appropriate values.
+Ensure Content-Type contains charset=UTF-8 or use sed:
+
+	sed -i -e 's/.*Content-Type.*/"Content-Type: text\/plain; charset=UTF-8\\n"/g' po/MyProject.pot
+
+
+Create a PO file for each new translation
+=========================================
+
+http://www.gnu.org/software/gettext/manual/gettext.html#Creating
+
+To create a Russian (ru) translation file, run from the terminal in the po directory:
+
+	msginit --locale=ru --input=MyProject.pot --no-translator‏
+
+Move the output file, ru.po, to po/ru and rename from ru.po to MyProject.po
+
+Open po/ru/MyProject.po in a text editor and replace the first line in the header
+
+	# SOME DESCRIPTIVE TITLE.
+
+with
+
+	# Russian translation for MyProject.
+
+Replace the fourth line in the header
+
+	# Automatically generated, ...
+
+with
+
+	# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+
+replacing each tag as appropriate.
+
+Replace 
+
+	"Last-Translator: Automatically generated\n"
+
+with translator name and email address.
+
+Replace
+
+	"Language-Team: none\n"
+
+with team name (typically the name of the language in English).
+
+For each msgid, replace with the appropriate translated text.
+
+
+Updating POT and PO files
+=========================
+
+If text has been added/edited/removed, simply create a new POT file as above.
+
+For a translator to update an existing PO file, take the newly generated POT file and
+from the terminal:
+
+    msgmerge MyProject.po MyProject.pot -o MyProject.po
+
+Which replaces the existing MyProject.po with a new/merged version.
+
+Translations for the strings which haven't changed are copied across.
+Translations which have slightly changed are mark with the tag "fuzzy".
+Update "fuzzy" translations as appropriate.
+Update the header as appropriate.

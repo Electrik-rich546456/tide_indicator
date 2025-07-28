@@ -1,0 +1,136 @@
+# Russian translation for indicator-tide.
+# Copyright (C) 2015-2022 Bernard Giannetti
+# This file is distributed under the same license as the indicator-tide package.
+# Oleg Moiseichuk <berroll@mail.ru>, 2015-2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: indicator-tide 1.0.28\n"
+"Report-Msgid-Bugs-To: <thebernmeister@hotmail.com>\n"
+"POT-Creation-Date: 2022-11-03 16:41+1100\n"
+"PO-Revision-Date: 2022-08-08 15:28+0300\n"
+"Last-Translator: Oleg Moiseichuk <berroll@mail.ru>\n"
+"Language-Team: Russian\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: indicator-tide.py:50
+msgid "Displays tidal information."
+msgstr "Показывает сведения о приливах."
+
+#: indicator-tide.py:79 indicator-tide.py:80
+msgid "No tidal data available!"
+msgstr "Данные о приливах недоступны!"
+
+#: indicator-tide.py:81
+msgid "Check the log in your home directory."
+msgstr "Проверьте журнал в домашней папке."
+
+#: indicator-tide.py:118 indicator-tide.py:136
+msgid "HIGH"
+msgstr "ПРИЛИВ"
+
+#: indicator-tide.py:118 indicator-tide.py:136
+msgid "LOW"
+msgstr "ОТЛИВ"
+
+#: indicator-tide.py:176
+msgid "User script"
+msgstr "Пользовательский сценарий"
+
+#: indicator-tide.py:181
+msgid "Full path and filename of user's Python3 script."
+msgstr "Полный путь и имя файла пользовательского сценария Python3."
+
+#: indicator-tide.py:189
+msgid "User class"
+msgstr "Пользовательский класс"
+
+#: indicator-tide.py:195
+msgid ""
+"Class name within the user script,\n"
+"which must contain the function\n"
+"\n"
+"    getTideData()\n"
+"\n"
+"implemented by the user to obtain\n"
+"the tidal data."
+msgstr ""
+"Имя класса в пользовательском сценарии,\n"
+"которое должно содержать функцию\n"
+"\n"
+"    getTideData()\n"
+"\n"
+"разработанную пользователем, для полученияданных о приливах."
+
+#: indicator-tide.py:207
+msgid "Show as submenus"
+msgstr "Отображать подменю"
+
+#: indicator-tide.py:209
+msgid "Show each day's tides in a submenu."
+msgstr "Отображать приливы каждого дня в виде подменю."
+
+#: indicator-tide.py:213
+msgid "Except first day"
+msgstr "Кроме первого дня"
+
+#: indicator-tide.py:217
+msgid "Show the first day's tide in full."
+msgstr "Отображать приливы первого дня полностью."
+
+#: indicator-tide.py:234
+msgid "The user script path/filename cannot be found."
+msgstr "Пользовательский сценарий с заданным именем не найден."
+
+#: indicator-tide.py:240
+msgid "The user script path/filename cannot be empty."
+msgstr "Имя пользовательского сценария не может быть пустым."
+
+#: indicator-tide.py:245
+msgid "The user script class name cannot be empty."
+msgstr "Имя класса в пользовательском сценарии не может быть пустым."
+
+#: indicatorbase.py:79
+msgid "Initialising..."
+msgstr "Инициализация..."
+
+#: indicatorbase.py:110 indicatorbase.py:204
+msgid "Preferences"
+msgstr "Параметры"
+
+#: indicatorbase.py:114
+msgid "About"
+msgstr "О программе"
+
+#: indicatorbase.py:118
+msgid "Quit"
+msgstr "Выход"
+
+#: indicatorbase.py:156
+msgid "translator-credits"
+msgstr "Олег Мойсейчук"
+
+#: indicatorbase.py:162
+msgid "Credits"
+msgstr "Благодарность"
+
+#: indicatorbase.py:173 indicatorbase.py:174
+msgid "View the"
+msgstr "Просмотреть"
+
+#: indicatorbase.py:173 indicatorbase.py:174
+msgid "text file."
+msgstr "."
+
+#: indicatorbase.py:173
+msgid "changelog"
+msgstr "список изменений"
+
+#: indicatorbase.py:174
+msgid "error log"
+msgstr "журнал ошибок"

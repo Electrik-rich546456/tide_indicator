@@ -1,0 +1,18 @@
+# Ignore the config file containing the API key
+config.py
+
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore user-specific files
+.DS_Store
+tide_info_gui.py
+indicator-tide(no echo).py
+
+# Ignore log files
+*.log
+
+# Ignore shell scripts
+*.sh
