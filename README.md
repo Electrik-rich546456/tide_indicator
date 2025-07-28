@@ -4,7 +4,7 @@ A Python-based application indicator for Linux desktop environments that display
 
 ## Description
 
-This application fetches tidal data from the UK National Tide Gauge Network API (Admiralty API) and presents it conveniently in your system tray. It provides essential information such as high/low water times and heights. The application is designed to be easily configurable with user-defined scripts for data retrieval and supports dynamic time adjustments for daylight saving.
+This application fetches tidal data from the UK National Tide Gauge Network API (Admiralty API - UK Tidal API - Discovery) and presents it conveniently in your system tray. It provides essential information such as high/low water times and heights. The application is designed to be easily configurable with user-defined scripts for data retrieval and supports dynamic time adjustments for daylight saving.
 
 ## Installation
 
@@ -20,6 +20,7 @@ This application fetches tidal data from the UK National Tide Gauge Network API 
     ```
 
 3.  **Configure API Key:**
+    To obtain an API key, register at the [Admiralty API Developer Portal](https://developer.admiralty.co.uk/).
     Create a file named `config.py` in the `src/` directory with your Admiralty API key:
     ```python
     # src/config.py
