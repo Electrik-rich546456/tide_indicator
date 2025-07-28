@@ -134,7 +134,7 @@ class IndicatorBase( ABC ):
         self.comments = comments
 
         self.copyrightName = "Bernard Giannetti"
-        self.website = "https://launchpad.net/~thebernmeister/+archive/ubuntu/ppa"
+        self.website = "https://github.com/Electrik-rich546456/tide_indicator"
         self.authors = [ self.copyrightName + " " + self.website ]
         self.artwork = artwork if artwork else self.authors
 
