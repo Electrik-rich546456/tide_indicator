@@ -32,7 +32,7 @@ from gi.repository import Gtk, Notify
 from indicatorbase import IndicatorBase
 from pathlib import Path
 
-import datetime, importlib.util, json, os, sys, webbrowser
+import datetime, importlib.util, json, os, sys, webbrowser, config
 
 
 class IndicatorTide( IndicatorBase ):

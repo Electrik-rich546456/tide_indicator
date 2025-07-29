@@ -20,10 +20,23 @@ class MyCustomTideGetter(TideDataGetterBase):
             logging.info("MyCustomTideGetter.getTideData called.")
 
         # Set the API endpoint URL with placeholders for station and duration
+        from tidedatagetterbase import TideDataGetterBase
+import config
+
+
+class MyCustomTideGetter(TideDataGetterBase):
+
+    @staticmethod
+    # IMPORTANT: Remove @abstractmethod from here! (This comment is for initial setup, keep it for context)
+    # --- START: Add 'durationDays' and 'seaportId' parameters to method signature ---
+    def getTideData(logging=None, urlTimeoutInSeconds=20, durationDays=7, seaportId="0536"):
+    # --- END: Add 'durationDays' and 'seaportId' parameters to method signature ---
+        if logging:
+            logging.info("MyCustomTideGetter.getTideData called.")
+
+        # Set the API endpoint URL with placeholders for station and duration
         station_details_endpoint_url = "https://admiraltyapi.azure-api.net/uktidalapi/api/V1/Stations/{station}"
         events_endpoint_url = "https://admiraltyapi.azure-api.net/uktidalapi/api/V1/Stations/{station}/TidalEvents?duration={duration}"
-
-        import config
 
         # Set the API key and headers
         # CONSIDER: Moving API keys out of directly accessible code (e.g., environment variable)
