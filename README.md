@@ -20,7 +20,7 @@ This application fetches tidal data from the UK National Tide Gauge Network API 
     ```
 
 3.  **Configure API Key:**
-    To obtain an API key, register at the [Admiralty API Developer Portal](https://developer.admiralty.co.uk/).
+    To obtain an API key, register at the [Admiralty API Developer Portal](https://developer.admiralty.co.uk/).Look for "UK Tidal API - Discovery" The free api.
     Create a file named `config.py` in the `src/` directory with your Admiralty API key:
     ```python
     # src/config.py
